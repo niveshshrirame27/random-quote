@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <title>Random Quote Machine</title>
+    <script type="text/javascript">
+
+      const quoteHouse = [
+      {
+        Quote: "You have the right to work, but never to the fruit of the work. You should never engage in action for the sake of reward, nor should you long for Inaction.",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "It is better to live your own destiny imperfectly than to live an imitation of somebody else's life with perfection.",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "Stay Away From Bad Things. Lust, anger and greed, these are the three doors to self-destructive hell. Thus, one should avoid these..!!",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "Do everything you have to do, but not with greed, not with ego, not with lust, not with envy but with love, compassion, humility and devotion.",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "Happiness Is A State Of Mind, That Has Nothing To Do With The External World.",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "A Man Is Made By His Beliefs. As He Believes. So He Becomes.",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "The Key To Happiness Is The Reduction Of Desires.",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "A Gift Is Pure When It Is Given From The Heart To The Right Person At The Right Time And At The Right Place, And When We Expect Nothing In Return.",
+        Author: "Lord Krishna"
+      },
+      {
+        Quote: "Seek wisdom, for it is the key to life's treasures.",
+        Author: "Lord Ganesha"
+      },
+      {
+        Quote: "In every challenge, find an opportunity. In every sorrow, find hope.",
+        Author: "Lord Ganesha"
+      },
+      {
+        Quote: "I am everything male and female, light and dark, flesh and spirit.",
+        Author: "Lord Shiva, Bhagavad Gita"
+      },
+      {
+        Quote: "Nothing is more important than life. It’s the greatest gift that you should always remember.",
+        Author: "Lord Shiva, Bhagavad Gita"
+      },
+      {
+        Quote: "You are free to make any decision you desire, but you aren’t free from the consequences of those decisions.",
+        Author: "Lord Shiva, Bhagavad Gita"
+      }
+    ];
+
+
+
+      window.onload = init;
+      function init() {
+        generatingNewQuote()
+      };
+
+      function generatingNewQuote() {
+        console.log("New Quote Generated");
+        let randomQuotes = quoteHouse[Math.floor(Math.random() * quoteHouse.length)];
+        document.getElementById("text").innerText = randomQuotes.Quote;
+        document.getElementById("author").innerText = randomQuotes.Author;
+      };
+
+
+
+    </script>
+    <style>
+      *{
+        margin:20px 20px 20px 20px;
+        font-size:1.5rem;
+        text-align:centre;
+      };
+
+    </style>
+  </head>
+  <body>
+    <wrapper id="quote-box">
+
+      <div id="text">
+      </div>
+
+      <div id="author">
+      </div>
+
+      <button id="new-quote" onClick="generatingNewQuote()">New Quote</button>
+
+      <a class="button" title="Tweet this quote!" id="tweet-quote" target="_blank" href="twitter.com/intent/tweet">Tweet Quote</a>
+
+    </wrapper>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+  </script>
+  </body>
+</html>
